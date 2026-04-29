@@ -1,0 +1,34 @@
+<!-- Ejercicios para usar prompt, document.write().
+Para desarrollar los siguientes ejercicios debe crear por cada ejercicio un archivo html,
+dentro de la etiqueta <body></body> agregar las etiquetas <script></script> y dentro de
+ellas agregar el código javascript para resolver cada ejercicio. Para mostrar los resultados
+utilizar template strings -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <script>
+        const retornarMes = (numero) => {
+            const meses = [
+                "Enero", "Febrero", "Marzo", "Abril",
+                "Mayo", "Junio", "Julio", "Agosto",
+                "Septiembre", "Octubre", "Noviembre", "Diciembre"
+            ];
+
+            if (numero >= 1 && numero <= 12) {
+                return meses[numero - 1];
+            } else {
+                return "No es un mes válido";
+            }
+        };
+        const num = parseInt(prompt("Ingrese un número del 1 al 12:"));
+        document.write(`<p>El número ingresado es: ${num}</p>`);
+        document.write(`<p>Resultado: ${retornarMes(num)}</p>`);
+    </script>
+</body>
+</html>
