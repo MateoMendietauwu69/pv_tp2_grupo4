@@ -1,42 +1,59 @@
-let notas = [5,6,3,1,7,10,8,2,8,9];
+const notas = [7,4,6,9,3,6,7,9,10,2];
 
-let suma = 0;
-let aprobadas = 0;
+const mostrarNotas = () => {
+    let resultado="| ";
+    console.log("Todas las notas:");
+    notas.forEach(nota => resultado += nota += " | ");
 
-console.log("Todas las notas:");
+    console.log(resultado);
+};
 
-for(let i=0; i< notas.length; i++){
-    console.log(notas[i]);
-    suma+=notas[i];
-    if(notas[i]>= 6)
-    {
-        aprobadas++;
-    }
-}
+//notas aprobadas
+const aprobadas = () => {
+    let resultado ="| ";
+    console.log ("Notas aprobadas:");
+    notas.forEach(nota => {
+        if (nota >=6)
+        {resultado += nota + " | ";}
 
-//aprobadas
-console.log("Notas aprobadas:");
-for(let i=0;i<notas.length;i++)
-{
-    if(notas[i]>=6)
-    {
-        console.log(notas[i]);
-    }
+    });
+    console.log(resultado);
+};
 
-}
+//notas desaprobadas
+const desaprobadas = () => {
+    let resultado = "| ";
+    console.log("Notas desaprobadas:");
+    notas.forEach(nota => {
+        if (nota < 6)
+        {resultado += nota + " | ";}
+    });
 
-//desaprobadas
-console.log("Notas desaprobadas:");
-for(let i=0;i<notas.length;i++)
-{   if(notas[i]<6)
-    {
-        console.log(notas[i]);
-    }
-}
+    console.log(resultado);
+};
 
 //promedio
-let promedio = suma / notas.length;
-console.log("Promedio general:", promedio);
+const promedio = () =>{
+let suma = 0;
+notas.forEach(nota => suma +=nota);
+const promedio = suma / notas.length;
+console.log ("Promedio general:", promedio);
+};
 
-//cant aprobadas
-console.log("Cantidad de notas aprobadas:", aprobadas);
+
+//cantidad de notas aprobadas
+const cantAprobadas = () => 
+{
+    let contador = 0;
+    notas.forEach(nota =>{
+    if (nota >= 6)
+        {contador++;}
+    });
+    console.log("Cantidad de notas aprobadas:", contador);
+};
+
+mostrarNotas();
+aprobadas();
+desaprobadas();
+promedio();
+cantAprobadas();
