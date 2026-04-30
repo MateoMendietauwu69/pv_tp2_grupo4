@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+</head>
+<body>
+    <script>
+        const sumarRango= (inicio,fin) =>{
+           const n = fin - inicio + 1;
+           return (n* (inicio+ fin )) / 2;
+        };
+
+
+
+        const inicio = Number(prompt("Ingresá el número inicial:"));
+        const fin = Number(prompt("Ingresá el número final:"));
+        
+        if (inicio <= fin ) {
+            const resultado = sumarRango(inicio, fin);
+            document.write(`La suma desde ${inicio} hasta ${fin} es: ${resultado}`);
+        } else {
+            document.write(`Error: el número inicial debe ser menor o igual al final`);
+        }
+
+
+    </script>
+</body>
+</html>
