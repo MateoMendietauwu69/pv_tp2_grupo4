@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicio 13</title>
+    </head>
+    <body>
+        <script>
+            function mostrarArreglo(array, num)
+            {
+                for(let j=0; j<num; j++)
+                {
+                    document.writeln(array[j] + "<br>");
+                    
+                }
+            }
+            let arr=[];
+            let n = Number(prompt("Ingrese la cantidad de numeros que se almacenaran en el array: "));
+            for(let i=0; i<n; i++)
+            {
+                arr[i]=Number(prompt("Ingrese numero: "));
+            }
+            mostrarArreglo(arr, n);
+        </script>
+    </body>
+</html>

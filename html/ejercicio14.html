@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 14</title>
+</head>
+<body>
+
+    <script>
+        
+        function duplicar(arreglo) {
+            return arreglo.map(num => num * 2);
+        }
+
+        const cantidad = Number(prompt("Cuantor numeros se van a ingresar:"));
+        const numerosOriginales = [];
+
+        for (let i = 0; i < cantidad; i++) {
+            let valor = Number(prompt(`Ingrese un numero`));
+            numerosOriginales.push(valor); 
+        }
+
+        const numerosDuplicados = duplicar(numerosOriginales);
+
+        document.write(`<p><strong>El arreglo original es:</strong> [${numerosOriginales}]</p>`);
+        document.write(`<p><strong>El arreglo duplicado es de:</strong> [${numerosDuplicados}]</p>`);
+
+    </script>
+
+</body>
+</html>
