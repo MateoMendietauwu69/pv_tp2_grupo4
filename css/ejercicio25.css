@@ -1,0 +1,26 @@
+body{
+    font-family: 'Asimovian', sans-serif;
+}
+
+.cuer{
+    text-align: center;
+}
+
+#text{
+    font-size: 60px;
+}
+
+#boton{
+    font-size: 40px;
+    border-radius: 15px;
+    border-color: pink;
+    color: white;
+    background-color: rgba(255, 192, 203, 0.774);
+}
+
+#boton:hover{
+    background-color: rgba(255, 192, 203, 0.582);
+    border-color: white;
+    box-shadow: 
+        0 0 5px  rgba(255, 192, 203, 0.582);
+}
